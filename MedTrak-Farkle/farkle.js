@@ -75,6 +75,7 @@ function updateDiceImg() {
   for (var i = 0; i < 6; i++) {
     diceImage = "images/" + diceArr[i].value + ".png";
     document.getElementById(diceArr[i].id).setAttribute("src", diceImage);
+    document.getElementById(diceArr[i].id).classList.remove("transparent");
   }
 }
 
@@ -163,6 +164,11 @@ function bankScore() {
 
 function addPlayer() {
   numPlayers++;
+  resetGame();
+}
+
+function removePlayer() {
+  if (numPlayers > 1) numPlayers--;
   resetGame();
 }
 
