@@ -1,40 +1,66 @@
-img{
-	width:80px;
+img {
+  width: 80px;
 }
-body{
-	background-color: #fff;
-	background-image: linear-gradient(-90deg, #667be6, #754da3);
-	font-family: arial;
+body {
+  background-color: #fff;
+  background-image: linear-gradient(-90deg, #667be6, #754da3);
+  font-family: arial;
 }
-.row{
-	margin:auto;
-	width: 800px;
-	max-width: 100%;
+table {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  width: 30%;
+  margin: auto;
 }
-.header{
-	height: 100px;
-	max-height: 100%;
-	font-size: 50px;
-	text-align: center;
-	line-height: 100px;
-	font-family: arial;
-	color: #fff;
+th {
+  border: 1px solid #fff;
+  border-collapse: collapse;
 }
-.dice{
-	max-width: 520px;
-	margin:0 auto;
+td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  font-size: 12px;
 }
-.score{
-	background-color: rgba(52,52,52,0.3);
-	color: #fff;
-	height: 60px;
-	max-height:100%;
-	font-size: 32px;
-	text-align: center;
-	line-height: 60px;
-	width:120px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+.row {
+  margin: auto;
+  min-height: 20px;
+  width: 100%;
+}
+.header {
+  height: 100px;
+  max-height: 100%;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  font-family: arial;
+  color: #fff;
+}
+.dice {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.score {
+  background-color: rgba(52, 52, 52, 0.3);
+  color: #fff;
+  height: 60px;
+  max-height: 100%;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  width: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.farkle {
+  color: #fff;
+  height: 60px;
+  max-height: 100%;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  width: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .button {
   background-color: green;
@@ -44,22 +70,36 @@ body{
   border: none;
   display: inline-block;
   font-size: 16px;
-  margin-left: 25px;
+  margin-left: 10px;
 }
-.column{
-	float: left;
-	width:20%;
-	margin-left: 160px;
+.column {
+  float: left;
+  width: 25%;
+  margin-left: 6%;
 }
-.roll{
+.message {
+  width: 80%;
+  height: 100px;
+  max-height: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  font-family: arial;
+  color: #fff;
 }
-.roll:hover{
+#message {
+  color: #f55;
+  font-size: 24px;
 }
-.bank{
+.roll {
 }
-.bank:hover{
+.roll:hover {
 }
-.transparent{
-	/*For dice that are selected*/
-	opacity: 0.75;
+.bank {
+}
+.bank:hover {
+}
+.transparent {
+  /*For dice that are selected*/
+  opacity: 0.75;
 }

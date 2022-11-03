@@ -6,8 +6,9 @@
 	<title>Farkle!</title>
 </head>
 
-<body onload="initializeDice()">
+<body onload="resetGame()">
 	<header class="row header">Welcome to Farkle!</header>
+	<div id="turn" class="row message">Player 1's turn</div>
 	<div class="row">
 		<!-- Dice images -->
 		<div class="dice"> 
@@ -19,13 +20,64 @@
 			<img src="images/6.png" id="die6" data-number="5" onclick="diceClick(this)">
 		</div>
 	</div>
+	<!-- Farkle Alert -->
+	<div id="farkle" class="row farkle"></div>
 	<!-- Scoring -->
-	<div class="row score"> 0 </div>
-
+	<div id="score" class="row score"> 0 </div>
 	<!-- Button row -->
 	<div class="row">
 		<button class="button roll column" onclick="rollDice()">Roll Dice</button>
-		<button class="button bank column">Bank Score</button>
+		<button class="button lock column" onClick="scoreSelected()">Score Selected</button>
+		<button class="button bank column" onClick="bankScore()">Bank Score</button>
+	</div>
+	<!-- Message to Players-->
+	<div id="message" class="row message">Roll the dice to begin the game.</div>
+	<div class="row">
+		<button class="button add column" onclick="addPlayer()">Add Player</button>
+		<button class="button remove column" onClick="removePlayer()">Remove Player</button>
+		<button class="button reset column" onClick="resetGame()">Reset Game</button>
+	</div>
+
+	<div id="scoreboard" class="row message"></div>
+	
+	<div class="row message">
+		Here are the rules of Farkle:
+		On your turn, you roll six dice. Points are earned every time you roll a 1, 5, or three of a kind. 
+		<table>
+			<tr>
+				<th>Dice Combo</th><th>Score</th>
+			</tr>
+			<tr>
+				<td>Each 1 rolled</td><td>100</td>
+			</tr>
+			<tr>
+				<td>Each 5 rolled</td><td>50</td>
+			</tr>
+			<tr>
+				<td>three 1's</td><td>1000</td>
+			</tr>
+			<tr>
+				<td>three 2's</td><td>200</td>
+			</tr>
+			<tr>
+				<td>three 3's</td><td>300</td>
+			</tr>
+			<tr>
+				<td>three 4's</td><td>400</td>
+			</tr>
+			<tr>
+				<td>three 5's</td><td>500</td>
+			</tr>
+			<tr>
+				<td>three 6's</td><td>600</td>
+			</tr>
+		</table>
+		If none of the dice rolled earned points, that's a Farkle! Your turn is over and you earn no points. 
+		If you roll at least one scoring die, you can either bank your point total and pass your turn, 
+		or you can risk these points by putting aside the dice you've scored (at least one) and continuing to roll the remaining dice. 
+		The remaining dice may earn you additional points, but if you Farkle, you lose everything you've earned during your turn.
+		Scoring is based only on the dice in each roll. You cannot earn points by combining dice from different rolls. 
+		You can continue rolling the dice until you either Pass or Farkle
 	</div>
 </body>
 </html>
